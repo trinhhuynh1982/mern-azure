@@ -19,7 +19,7 @@ class Form extends Component {
     e.preventDefault();
     const { name, position, company } = this.state;
     axios({
-      url: '/add',
+      url: '/api/add',
       method: 'POST',
       data: {
         name,

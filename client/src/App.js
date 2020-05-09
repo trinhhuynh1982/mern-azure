@@ -13,7 +13,7 @@ class App extends Component {
   };
 
   fetchUsers = () => {
-    axios.get('/users')
+    axios.get('/api/users')
       .then((response) => {
         const { users } = response.data;
         this.setState({ users: [...this.state.users, ...users] })

@@ -3,7 +3,7 @@ const { isEmpty } = require('lodash');
 const User = require('../models/user');
 const router = express.Router();
 
-router.post('/add', async (req, res) => {
+router.post('/api/add', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
             message: 'Body should not be empty',
@@ -37,7 +37,7 @@ router.post('/add', async (req, res) => {
 });
 
 
-router.get('/users', async (req, res) => {
+router.get('/api/users', async (req, res) => {
 
     try {
         const users = await User.find({});
