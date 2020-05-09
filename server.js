@@ -52,12 +52,10 @@ app.use('/', routes);
     });
 } */
 
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
     // res.sendFile('index.html', { root: __dirname + '/client/mern_azure_example/build/' });
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
-
-const { PORT } = process.env;
 
 app.listen(PORT, () => {
     log(`Server is starting at PORT: ${PORT}`);
